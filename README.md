@@ -1,3 +1,6 @@
+# Disclaimer
+This is a fork from the original [swiftui-cached-async-image](https://github.com/lorenzofiamingo/swiftui-cached-async-image) by [Lorenzo Fiamingo](https://github.com/lorenzofiamingo)
+
 # SwiftUI CachedAsyncImage 🗃️
 
 `CachedAsyncImage` is `AsyncImage`, but with cache capabilities. 
@@ -33,20 +36,5 @@ Remember when setting the cache the response (in this case our image) must be no
 ## Installation
 
 1. In Xcode, open your project and navigate to **File** → **Swift Packages** → **Add Package Dependency...**
-2. Paste the repository URL (`https://github.com/lorenzofiamingo/swiftui-cached-async-image`) and click **Next**.
+2. Paste the repository URL (`https://github.com/RaulSul/swiftui-cached-async-image`) and click **Next**.
 3. Click **Finish**.
-
-
-## Other projects
-
-[SwiftUI VariadicViews 🥞](https://github.com/lorenzofiamingo/swiftui-variadic-views)
-
-[SwiftUI AsyncButton 🖲️](https://github.com/lorenzofiamingo/swiftui-async-button)
-
-[SwiftUI MapItemPicker 🗺️](https://github.com/lorenzofiamingo/swiftui-map-item-picker)
-
-[SwiftUI PhotosPicker 🌇](https://github.com/lorenzofiamingo/swiftui-photos-picker)
-
-[SwiftUI VerticalTabView 🔝](https://github.com/lorenzofiamingo/swiftui-vertical-tab-view)
-
-[SwiftUI SharedObject 🍱](https://github.com/lorenzofiamingo/swiftui-shared-object)
