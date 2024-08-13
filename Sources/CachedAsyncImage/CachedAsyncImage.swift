@@ -316,9 +316,16 @@ public struct CachedAsyncImage<Content>: View where Content: View {
     private func load() async {
         do {
             if let urlRequest = urlRequest {
+                // First check if the image is cached
+                if let cachedImage = try cachedImage(from: urlRequest, cache: urlSession.configuration.urlCache!) {
+                    phase = .success(cachedImage)
+                    return // Return early since the image is already cached
+                }
+                
+                // Proceed to download the image
                 let (image, metrics) = try await remoteImage(from: urlRequest, session: urlSession)
                 if metrics.transactionMetrics.last?.resourceFetchType == .localCache {
-                    // WARNING: This does not behave well when the url is changed with another
+                    // Cached image, but this should be redundant with the early return above
                     phase = .success(image)
                 } else {
                     withAnimation(transaction.animation) {
